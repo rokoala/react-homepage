@@ -1,4 +1,14 @@
+html{
+  width: 100vw;
+  height: 100vh;
+}
+
 .header {
-  margin-top: 6rem;
+  margin-top: 20vh;
+  text-align: center;
+}
+
+.main-values{
+  margin-top: 9vh;
   text-align: center;
 }

@@ -9,7 +9,7 @@ import LoginHandler from './components/Login.js';
 import Home from './components/Home.js';
 import About from './components/About.js';
 import Skill from './components/Skill.js';
-import lifestyle from './components/Lifestyle.js';
+import Lifestyle from './components/Lifestyle.js';
 
 class App extends React.Component{
 
@@ -40,13 +40,19 @@ class App extends React.Component{
       return (
         <div className="container">
           <section className="header">
-            <h2 className="title">Application</h2>
+            <h1 className="title">Application</h1>
           </section>
-          <ul>
-            <li><a href="#/about">About</a></li>
-            <li><a href="#/skill">Skills</a></li>
-            <li><a href="#/lifestyle">Lifestyle</a></li>
-          </ul>
+          <div className="main-values row">
+            <div className="four columns">
+              <a href="#/about">About</a>
+            </div>
+            <div className="four columns">
+              <a href="#/skill">Skills</a>
+            </div>
+            <div className="four columns">
+              <a href="#/lifestyle">Lifestyle</a>
+            </div>
+          </div>
           <Child/>
         </div>
       )
