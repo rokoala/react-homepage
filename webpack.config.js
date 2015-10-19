@@ -8,12 +8,12 @@ module.exports = {
       "./js/index"
     ],
     output: {
-        path: path.join( __dirname,'/build'),
+        path: process.env.NODE_ENV === 'production' ? path.join( __dirname,'/dist') : path.join( __dirname,'/build'),
         filename: "bundle.js"
     },
     module: {
         loaders: [
-            { test: /\.js$/, loaders: ['react-hot', 'babel-loader', 'babel'], exclude: /node_modules/ },
+            { test: /\.js$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/ },
             { test: /\.css$/, loader: "style-loader!css-loader" }
         ]
     },
