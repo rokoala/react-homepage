@@ -1,4 +1,4 @@
-
+require('font-awesome/css/font-awesome.css');
 require('../node_modules/skeleton-css/css/skeleton.css');
 require('../css/custom.css');
 
@@ -9,7 +9,7 @@ import LoginHandler from './components/Login.js';
 import Home from './components/Home.js';
 import About from './components/About.js';
 import Skill from './components/Skill.js';
-import Lifestyle from './components/Lifestyle.js';
+import Contact from './components/Contact.js';
 
 class App extends React.Component{
 
@@ -30,27 +30,27 @@ class App extends React.Component{
       let Child
 
       switch (this.state.route) {
-        case '/':          Child = Home; break;
+        case '/':          Child = About; break;
         case '/about':     Child = About; break;
         case '/skill':     Child = Skill; break;
-        case '/lifestyle': Child = Lifestyle; break;
+        case '/contact':   Child = Contact; break;
         default:           Child = Home;
       }
 
       return (
         <div className="container">
-          <section className="header">
-            <h1 className="title">Application</h1>
-          </section>
+          <div className="row" style={{textAlign:'center',marginTop:'3vh'}}>
+            <a href="/" title="Home"><i className="fa fa-home fa-2x"></i></a>
+          </div>
           <div className="main-values row">
             <div className="four columns">
-              <a href="#/about">About</a>
+              <a className="button" href="#/about">About</a>
             </div>
             <div className="four columns">
-              <a href="#/skill">Skills</a>
+              <a className="button" href="#/skill">Skills</a>
             </div>
             <div className="four columns">
-              <a href="#/lifestyle">Lifestyle</a>
+              <a className="button" href="#/contact">Contact</a>
             </div>
           </div>
           <Child/>

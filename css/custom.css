@@ -3,12 +3,56 @@ html{
   height: 100vh;
 }
 
-.header {
-  margin-top: 20vh;
+.main-values{
+  margin-top: 7vh;
   text-align: center;
 }
 
-.main-values{
-  margin-top: 9vh;
+.view-content{
   text-align: center;
+}
+
+.content-title{
+  padding: 13vh 0 5vh;
+}
+
+.non-style-list{
+  list-style:none
+}
+
+.bit-letters{
+  font-family:'Press Start 2P', cursive;
+  color:royalblue;
+  font-size:25px;
+  padding: 5px;
+}
+
+.clickable-content{
+  cursor: pointer;
+  color:gray;
+}
+
+.clickable-content:hover{
+  color:#4078c0;
+}
+
+.mail-me{
+  margin-bottom: 80px;
+}
+
+.blink {
+  animation: blink 1s steps(5, start) infinite;
+  -webkit-animation: blink 1s steps(5, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
 }
