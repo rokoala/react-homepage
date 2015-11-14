@@ -5,7 +5,7 @@ var express = require('express');
 var path = require('path');
 
 var isProduction = process.env.NODE_ENV === 'production';
-var port = 8080;
+var port = 8085;
 
 if (isProduction) {
 
@@ -24,12 +24,12 @@ new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
   hot: true,
   historyApiFallback: true
-}).listen(8080, 'localhost', function (err, result) {
+}).listen(8085, 'localhost', function (err, result) {
   if (err) {
     console.log(err);
   }
 
-  console.log('Listening at localhost:8080');
+  console.log('Listening at localhost:8085');
 });
 
 }
