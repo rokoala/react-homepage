@@ -44,7 +44,8 @@ module.exports = {
       new webpack.HotModuleReplacementPlugin(),
       new HtmlWebpackPlugin({
         title: 'It\'s me Koga',
-        template: 'template.html' // Load a custom template
+        template: 'template.html', // Load a custom template
+        favicon:'images/favicon.ico'
       })
     ]
 };
